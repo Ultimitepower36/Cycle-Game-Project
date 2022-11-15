@@ -17,10 +17,14 @@ namespace Unit05
         /// <param name="args">The given arguments.</param>
         static void Main(string[] args)
         {
+            Snake snake = new Snake();
+            snake.SetPosition(new Point(10,10));
+            Snake snake2 = new Snake();
+            snake2.SetPosition(new Point(20,20));
             // create the cast
             Cast cast = new Cast();
-            cast.AddActor("snake1", new Snake());
-            cast.AddActor("snake2", new Snake());
+            cast.AddActor("Player1", snake);
+            cast.AddActor("Player2", snake2);
             cast.AddActor("score", new Score());
 
             // create the services
