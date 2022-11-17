@@ -1,6 +1,6 @@
 using System;
 
-
+/*
 namespace Unit05.Game.Casting
 {
     /// <summary>
@@ -46,4 +46,4 @@ namespace Unit05.Game.Casting
             SetPosition(position);
         }
     }
-}
+}*/

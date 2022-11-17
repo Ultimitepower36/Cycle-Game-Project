@@ -2,7 +2,7 @@
 using Unit05.Game.Directing;
 using Unit05.Game.Scripting;
 using Unit05.Game.Services;
-
+using Unit05.Game;
 
 namespace Unit05
 {
@@ -17,10 +17,9 @@ namespace Unit05
         /// <param name="args">The given arguments.</param>
         static void Main(string[] args)
         {
-            Snake snake = new Snake();
-            snake.SetPosition(new Point(10,10));
-            Snake snake2 = new Snake();
-            snake2.SetPosition(new Point(20,20));
+            Snake snake = new Snake(Constants.RED, Constants.CELL_SIZE*3, Constants.CELL_SIZE*3);
+            Snake snake2 = new Snake(Constants.GREEN, Constants.CELL_SIZE*36, Constants.CELL_SIZE*36);
+
             // create the cast
             Cast cast = new Cast();
             cast.AddActor("Player1", snake);
@@ -29,7 +28,7 @@ namespace Unit05
 
             // create the services
             KeyboardService keyboardService = new KeyboardService();
-            VideoService videoService = new VideoService(false);
+            VideoService videoService = new VideoService(true);
            
             // create the script
             Script script = new Script();
