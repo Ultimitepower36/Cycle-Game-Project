@@ -80,9 +80,12 @@ namespace Unit05.Game.Scripting
         {
             if (isGameOver == true)
             {
+
                 Snake Player1 = (Snake)cast.GetFirstActor("Player1");
+                Player1.SetColor(Constants.WHITE);
                 List<Actor> segments1 = Player1.GetSegments();
                 Snake Player2 = (Snake)cast.GetFirstActor("Player2");
+                Player2.SetColor(Constants.WHITE);
                 List<Actor> segments2 = Player2.GetSegments();
 
                 // create a "game over" message
